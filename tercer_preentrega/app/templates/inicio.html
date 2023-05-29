@@ -1,4 +1,4 @@
-{% extends "app/padre.html" %}
+{% extends "padre.html" %}
 
 {% load static %}
 
@@ -12,15 +12,17 @@
     </form>
 
     {% if obras %}
-
-        <p> Buscando la {{obra}} </p>
+        <p>{{ message }}</p>
 
         <ul>
             {% for obra in obras %}
-                <li> {{obra.descripcion}}</li>
-                <li> {{barrio.nombre}}</li>
+                <li>{{ obra.descripcion }}</li>
+                <li>{{ barrio.nombre }}</li>
+            {% endfor %}
         </ul>
-    
+    {% else %}
+        <p>{{ message }}</p>
     {% endif %}
-    
+
+
 {% endblock %}

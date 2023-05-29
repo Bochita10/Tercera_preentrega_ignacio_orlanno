@@ -5,7 +5,7 @@ class Barrio(models.Model):
     nombre=models.CharField(max_length=50)
 
     def __str__(self) -> str:
-        return {self.nombre}
+        return self.nombre
 
 class Arquitecto(models.Model):
     nombre=models.CharField(max_length=50)

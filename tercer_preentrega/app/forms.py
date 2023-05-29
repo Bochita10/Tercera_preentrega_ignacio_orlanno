@@ -1,9 +1,15 @@
 from django import forms
+from app.models import Barrio, Arquitecto
 
-class Arquitecto(forms.Form):
-    nombre= forms.CharField(),
-    apellido= forms.CharField(),
+class ArquitectoFormulario(forms.Form):
+    nombre= forms.CharField()
+    apellido= forms.CharField()
     email= forms.EmailField()
 
-class Barrio(forms.Form):
+class BarrioFormulario(forms.Form):
     nombre= forms.CharField()
+
+class ObraFormulario(forms.Form):
+    descripcion = forms.CharField(max_length=50)
+    arquitecto = forms.ModelChoiceField(queryset=Arquitecto.objects.all())
+    barrio = forms.ModelChoiceField(queryset=Barrio.objects.all())
