@@ -1,0 +1,26 @@
+{% extends "app/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h3>Busca una obra por barrio:</h3>
+
+    <form action="/app/buscar/" method="GET">
+        <input type="charset" name="barrio" id="barrio"/>
+        <input type="submit" value="Buscar"/>
+    </form>
+
+    {% if obras %}
+
+        <p> Buscando la {{obra}} </p>
+
+        <ul>
+            {% for obra in obras %}
+                <li> {{obra.descripcion}}</li>
+                <li> {{barrio.nombre}}</li>
+        </ul>
+    
+    {% endif %}
+    
+{% endblock %}
