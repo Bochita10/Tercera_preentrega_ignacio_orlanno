@@ -1,0 +1,11 @@
+Para ejecutar la app
+1. Correr python3 manage.py runserver
+2. Ingresar a http://127.0.0.1:8000/app/
+3. Ir a la tab Barrios
+4. Ingresar un barrio
+5. Ir a la tab Arquitectos
+6. Ingresar un arquitecto
+7. Ir a la tab Obras
+8. Ingresar una obra
+9. Presionar el boton Inicio
+10. Buscar una obra ingresando un barrio
