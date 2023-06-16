@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         {% load static %}
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Blog</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
+        <title>Inicio</title>
+         <!-- Favicon-->
+         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+         <!-- Bootstrap icons-->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+         <!-- Google fonts-->
+         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+         <!-- Core theme CSS (includes Bootstrap)-->
+         <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
+         <!-- Navigation-->
+         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
+                {% comment %} <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a> {% endcomment %}
                 <a class="btn btn-primary" href="{% url 'Inicio' %}">Inicio</a>
                 <a class="navbar-brand" href="{% url 'Obras' %}">Obras</a>
                 <a class="navbar-brand" href="{% url 'Arquitectos' %}">Arquitectos</a>
@@ -36,7 +39,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-1">Blog Title</h1>
+                            <h1 class="mb-5">Manejador de Obras</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -50,12 +53,10 @@
                 </div>
             </div>
         </header>
-
         {% block contenidoQueCambia %}
 
         {% endblock %}
-        <!-- Blog content section-->
-        
+
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">
