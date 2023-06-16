@@ -4,6 +4,14 @@
 
 {% block contenidoQueCambia %}
 
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
     <h3>Busca una obra por barrio:</h3>
 
     <form action="/app/buscar/" method="GET">
